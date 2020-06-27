@@ -6,32 +6,11 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    android:background="@color/light_brown"
+    android:background="@drawable/gradient"
     tools:context=".Dashboard.Menu_login">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="30dp"
-        android:orientation="vertical">
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_keyboard_arrow_left"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Sign Up"
-            android:fontFamily="sans-serif-condensed-medium"
-            android:gravity="end"
-            android:textColor="@color/darkbrown"
-            android:textSize="15dp"/>
-
-    </RelativeLayout>
-
     <LinearLayout
+        android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
@@ -41,10 +20,17 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:fontFamily="sans-serif-condensed-medium"
-            android:text="Log In"
+            android:text="Masuk"
             android:textColor="@color/darkbrown"
-            android:textSize="25dp"
-            android:textStyle="bold" />
+            android:textSize="50dp"
+            android:textStyle="bold"/>
+
+        <ImageView
+            android:layout_width="250dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="45dp"
+            android:src="@drawable/logo" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -52,20 +38,13 @@
             android:layout_gravity="center"
             android:layout_marginTop="40dp" />
 
-        <ImageView
-            android:layout_width="150dp"
-            android:layout_height="100dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="15dp"
-            android:src="@drawable/logo_coffee_shop" />
-
         <EditText
             android:id="@+id/edtusername"
             android:layout_width="280dp"
             android:layout_height="45dp"
             android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/background_rounded"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/rounded"
             android:elevation="5dp"
             android:hint="Username"
             android:textColorHint="@color/darkbrown"
@@ -79,7 +58,7 @@
             android:layout_height="45dp"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
-            android:background="@drawable/background_rounded"
+            android:background="@drawable/rounded"
             android:elevation="5dp"
             android:hint="Password"
             android:textColorHint="@color/darkbrown"
@@ -92,18 +71,20 @@
             android:layout_height="45dp"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
-            android:text="Keep a signed in" />
+            android:text="Tetap Simpan"
+            android:textColor="@color/darkbrown"
+            android:textColorHighlight="@color/darkbrown"/>
 
         <Button
             android:id="@+id/btnSubmit"
             android:layout_width="280dp"
-            android:layout_height="34dp"
+            android:layout_height="45dp"
             android:layout_gravity="center"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
-            android:background="@drawable/button"
-            android:text="Log In"
+            android:background="@drawable/background_baru"
+            android:text="Masuk"
             android:textAllCaps="false"
             android:textColor="@color/white"
             android:textStyle="bold" />
@@ -118,7 +99,8 @@
             android:layout_marginRight="10dp"
             android:fontFamily="sans-serif-condensed-medium"
             android:gravity="center"
-            android:text="Create New Account"
+            android:text="Belum Punya Akun? Daftar Disini"
+            android:textColor="@color/darkbrown"
             android:textStyle="bold" />
 
     </LinearLayout>

@@ -56,7 +56,7 @@ public class Register extends AppCompatActivity {
         SudahPunyaAkun.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent =new Intent(Register.this,MainActivity.class);
+                Intent intent =new Intent(Register.this,Menu_login.class);
                 startActivity(intent);
                 finish();
             }

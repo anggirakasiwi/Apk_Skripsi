@@ -9,31 +9,10 @@
     android:background="@drawable/gradient"
     tools:context=".Register">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="30dp"
-        android:orientation="vertical">
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_keyboard_arrow_left"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Log In"
-            android:fontFamily="sans-serif-condensed-medium"
-            android:gravity="end"
-            android:textColor="@color/darkbrown"
-            android:textSize="15dp"/>
-
-    </RelativeLayout>
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:gravity="center"
         android:orientation="vertical">
 
         <TextView
@@ -41,82 +20,82 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:fontFamily="sans-serif-condensed-medium"
-            android:text="Create Your Account"
-            android:textColor="@color/coklat"
-            android:textSize="25dp"
-            android:textStyle="bold"/>
+            android:text="Daftar"
+            android:textColor="@color/darkbrown"
+            android:textSize="50dp"
+            android:textStyle="bold" />
 
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="40dp"/>
+            android:layout_marginTop="40dp" />
 
         <EditText
-            android:layout_width="280dp"
-            android:layout_height="45dp"
-            android:elevation="5dp"
-            android:layout_marginTop="10dp"
-            android:layout_gravity="center"
-            android:paddingLeft="15dp"
             android:id="@+id/edtfullname"
-            android:hint="Full Name"
-            android:inputType="textAutoComplete"
-            android:textColor="@color/darkbrown"
-            android:background="@drawable/rounded"/>
-
-        <EditText
             android:layout_width="280dp"
             android:layout_height="45dp"
-            android:elevation="5dp"
-            android:layout_marginTop="10dp"
             android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded"
+            android:elevation="5dp"
+            android:hint="Nama Lengkap"
+            android:inputType="textCapWords"
             android:paddingLeft="15dp"
+            android:textColor="@color/darkbrown" />
+
+        <EditText
             android:id="@+id/edtusername"
-            android:hint="Username"
+            android:layout_width="280dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded"
+            android:elevation="5dp"
+            android:hint="Nama Pengguna"
             android:inputType="textAutoComplete"
-            android:textColor="@color/darkbrown"
-            android:background="@drawable/rounded"/>
+            android:paddingLeft="15dp"
+            android:textColor="@color/darkbrown" />
 
         <EditText
-            android:layout_width="280dp"
-            android:layout_height="45dp"
-            android:elevation="5dp"
-            android:layout_marginTop="10dp"
-            android:layout_gravity="center"
-            android:paddingLeft="15dp"
             android:id="@+id/edtphonenumber"
-            android:hint="Phone Number"
+            android:layout_width="280dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded"
+            android:elevation="5dp"
+            android:hint="No Handphone"
             android:inputType="number"
-            android:textColor="@color/darkbrown"
-            android:background="@drawable/rounded"/>
+            android:paddingLeft="15dp"
+            android:textColor="@color/darkbrown" />
 
         <EditText
-            android:layout_width="280dp"
-            android:layout_height="45dp"
-            android:elevation="5dp"
-            android:layout_marginTop="10dp"
-            android:layout_gravity="center"
-            android:paddingLeft="15dp"
             android:id="@+id/edtemail"
-            android:hint="Email Address"
-            android:inputType="textEmailAddress"
-            android:textColor="@color/darkbrown"
-            android:background="@drawable/rounded"/>
-
-        <EditText
             android:layout_width="280dp"
             android:layout_height="45dp"
-            android:elevation="5dp"
-            android:layout_marginTop="10dp"
             android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded"
+            android:elevation="5dp"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
             android:paddingLeft="15dp"
+            android:textColor="@color/darkbrown" />
+
+        <EditText
             android:id="@+id/edtPassword"
-            android:hint="Password"
+            android:layout_width="280dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded"
+            android:elevation="5dp"
+            android:hint="Kata Sandi"
             android:inputType="textPassword"
-            android:textColor="@color/darkbrown"
-            android:background="@drawable/rounded"/>
+            android:paddingLeft="15dp"
+            android:textColor="@color/darkbrown" />
 
         <Button
             android:id="@+id/btnSubmit"
@@ -126,9 +105,9 @@
             android:layout_marginLeft="10dp"
             android:layout_marginTop="20dp"
             android:layout_marginRight="10dp"
-            android:background="@drawable/button"
+            android:background="@drawable/background_baru"
             android:text="Submit"
-            android:textAllCaps="false"
+            android:textAllCaps="true"
             android:textColor="@color/white"
             android:textStyle="bold" />
 
@@ -137,13 +116,14 @@
             android:layout_width="280dp"
             android:layout_height="45dp"
             android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
-            android:layout_marginLeft="10dp"
-            android:gravity="center"
-            android:text="Already have an account? Log In"
             android:fontFamily="sans-serif-condensed-medium"
-            android:textStyle="bold"/>
+            android:gravity="center"
+            android:text="Sudah Punya Akun? Masuk Disini"
+            android:textColor="@color/darkbrown"
+            android:textStyle="bold" />
 
     </LinearLayout>
 
