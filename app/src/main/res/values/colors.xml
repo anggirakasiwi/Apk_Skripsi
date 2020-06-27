@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="brown">#83996633</color>
+    <color name="lightbrown">#CC9966</color>
+    <color name="light_brown">#80F5DEB3</color>
+    <color name="darkbrown">#FF000000</color>
+    <color name="coklat">#8B4513</color>
+    <color name="tan">#BFD2B48C</color>
+    <color name="peach">#F2DCB3</color>
+    <color name="white">#FFF</color>
+    <color name="signupColor">#066e8a</color>
+</resources>
