@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="@drawable/gradient"
+    tools:context=".Dashboard.Login_Coffeeshop">
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="Masuk Coffee Shop"
+            android:textColor="@color/darkbrown"
+            android:textSize="40dp"
+            android:textStyle="bold"/>
+
+        <ImageView
+            android:layout_width="250dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="45dp"
+            android:src="@drawable/logo_coffeeshop" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp" />
+
+        <EditText
+            android:id="@+id/edtemail"
+            android:layout_width="280dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/rounded"
+            android:elevation="5dp"
+            android:hint="Email"
+            android:textColorHint="@color/darkbrown"
+            android:inputType="textEmailAddress"
+            android:paddingLeft="15dp"
+            android:textColor="@color/darkbrown" />
+
+        <EditText
+            android:id="@+id/edtpassword"
+            android:layout_width="280dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded"
+            android:elevation="5dp"
+            android:hint="Kata Sandi"
+            android:textColorHint="@color/darkbrown"
+            android:inputType="textPassword"
+            android:paddingLeft="15dp"
+            android:textColor="@color/darkbrown" />
+
+        <CheckBox
+            android:layout_width="280dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="Tetap Simpan"
+            android:textColor="@color/darkbrown"
+            android:textColorHighlight="@color/darkbrown"/>
+
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="280dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/background_baru"
+            android:text="Masuk"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/belum"
+            android:layout_width="280dp"
+            android:layout_height="31dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:gravity="center"
+            android:text="Belum Punya Akun? Daftar Disini"
+            android:textColor="@color/darkbrown"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</LinearLayout>

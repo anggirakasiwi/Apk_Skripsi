@@ -3,15 +3,28 @@
     package="com.anggi.belajaranggi">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/logo"
+        android:icon="@drawable/logo_coffeeshop"
         android:label="@string/app_name"
-        android:roundIcon="@drawable/logo"
+        android:roundIcon="@drawable/logo_coffeeshop"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Dashboard.Menu_login"></activity>
+        <activity android:name=".Dashboard.FloatingActionButton.FloatingActionButton"></activity>
+        <activity android:name=".Dashboard.Input_Datamenu" />
+        <activity android:name=".Dashboard.Input_Menu" />
+        <activity android:name=".Dashboard.Login_Coffeeshop" />
+        <activity
+            android:name=".Dashboard.Dashboard"
+            android:label="@string/title_activity_dashboard" />
+        <activity android:name=".Dashboard.MenuUtama_User" />
+        <activity android:name=".Dashboard.Akun" />
+        <activity android:name=".Storage.Register_Coffeeshop" />
+        <activity android:name=".Dashboard.Data_Coffeeshop" />
+        <activity android:name=".Dashboard.Menu_Awal" />
+        <activity android:name=".Dashboard.Menu_login" />
         <activity android:name=".MainActivity" />
         <activity android:name=".Dashboard.Menu_Utama" />
         <activity android:name=".Register" />

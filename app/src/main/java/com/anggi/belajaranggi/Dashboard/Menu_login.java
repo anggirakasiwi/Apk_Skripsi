@@ -15,6 +15,7 @@ import android.widget.Toast;
 import com.anggi.belajaranggi.MainActivity;
 import com.anggi.belajaranggi.R;
 import com.anggi.belajaranggi.Register;
+import com.anggi.belajaranggi.Storage.ShareprefManager;
 import com.anggi.belajaranggi.server.Network;
 
 import org.json.JSONException;
@@ -32,7 +33,7 @@ public class Menu_login extends AppCompatActivity {
     Button Login;
     ProgressDialog loading;
     TextView BelumPunyaAkun;
-    ProgressDialog Loading;
+    ShareprefManager sharePrefManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +47,7 @@ public class Menu_login extends AppCompatActivity {
         Password=(EditText)findViewById(R.id.edtpassword);
         Login=(Button)findViewById(R.id.btnSubmit);
         BelumPunyaAkun=(TextView)findViewById(R.id.belum);
+        sharePrefManager = new ShareprefManager(Menu_login.this);
 
         Login.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,6 +55,7 @@ public class Menu_login extends AppCompatActivity {
                 Checkinput();
             }
         });
+
         BelumPunyaAkun.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -62,9 +65,16 @@ public class Menu_login extends AppCompatActivity {
             }
         });
 
+        sharePrefManager = new ShareprefManager(Menu_login.this);
+        if (sharePrefManager.getSudahLogin()){
+            startActivity(new Intent(Menu_login.this, Dashboard.class)
+                    .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK));
+            finish();
+        }
+
     }
     private void Checkinput() {
-//        Loading.show();
+        loading = ProgressDialog.show(Menu_login.this,"Loading.....",null,true,true);
         String username = Username.getText().toString();
         String password = Password.getText().toString();
         if (username.isEmpty()) {
@@ -89,15 +99,20 @@ public class Menu_login extends AppCompatActivity {
                     try {
                         JSONObject jsonRESULTS = new JSONObject(response.body().string());
                         if (jsonRESULTS.getString("success").equals("true")){
-//                            Loading.dismiss();
+                            loading.dismiss();
                             String pesan_login=jsonRESULTS.getString("message");
+                            String  nama=jsonRESULTS.getString("nama");
+                            String  email=jsonRESULTS.getString("username");
+                            sharePrefManager.saveSPString(ShareprefManager.SP_NAMA, nama);
+                            sharePrefManager.saveSPString(ShareprefManager.SP_EMAIL, email);
+                            sharePrefManager.saveSPBoolean(ShareprefManager.SP_SUDAH_LOGIN, true);
                             Toast.makeText(Menu_login.this, ""+pesan_login, Toast.LENGTH_SHORT).show();
                             Intent intent =new Intent(Menu_login.this, Menu_Utama.class);
                             startActivity(intent);
                             finish();
                             Log.d("response api", jsonRESULTS.toString());
                         } else if (jsonRESULTS.getString("success").equals("false")){
-//                            Loading.dismiss();
+                            loading.dismiss();
                             String pesan_login=jsonRESULTS.getString("message");
                             Toast.makeText(Menu_login.this, ""+pesan_login, Toast.LENGTH_SHORT).show();
                             Log.v("ini",pesan_login);
@@ -115,6 +130,7 @@ public class Menu_login extends AppCompatActivity {
                 try {
                     LoginGagal();
                 } catch (Exception e) {
+                    loading.dismiss();
                     e.printStackTrace();
                 }
 
@@ -126,5 +142,10 @@ public class Menu_login extends AppCompatActivity {
     }
 
     private void LoginBerhasil() {
+    }
+
+    public void goBackMenu(){
+        startActivity(new Intent(this, Menu_Awal.class));
+        finish();
     }
 }
